@@ -1,0 +1,3 @@
+In git bash enter 
+cd d: 
+to get to the d drive

@@ -1,0 +1,60 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GraphicController : MonoBehaviour
+{
+    // Start is called before the first frame update
+    public Rigidbody2D myRigidbody; 
+    public SpriteRenderer spriteRenderer; 
+    public Sprite LeftArmSprite;
+    public Sprite RightArmSprite; 
+    public Sprite DownArmSprite; 
+    public Sprite UpArmSprite; 
+
+    void ChangeSprite_Left(Sprite LeftArmSprite){
+        spriteRenderer.sprite = LeftArmSprite; 
+    }
+    void ChangeSprite_Right(Sprite RightArmSprite){
+        spriteRenderer.sprite = RightArmSprite; 
+    }
+
+    void ChangeSprite_Down(Sprite DownArmSprite){
+        spriteRenderer.sprite = DownArmSprite; 
+    }
+
+    void ChangeSprite_Up(Sprite UpArmSprite){
+        spriteRenderer.sprite = UpArmSprite; 
+    }
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if( Input.GetKeyDown(KeyCode.LeftArrow) )
+        {
+            //myRigidbody.velocity = Vector2.left*1; 
+            ChangeSprite_Left(LeftArmSprite);
+        }
+        
+        if(Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            ChangeSprite_Right(RightArmSprite); 
+        }
+
+        if(Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            ChangeSprite_Down(DownArmSprite); 
+        }
+
+        if(Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            ChangeSprite_Up(UpArmSprite);
+        }
+        
+
+    }
+}
