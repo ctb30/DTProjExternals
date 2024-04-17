@@ -16,7 +16,7 @@ position6 = str(arm.getPosition(6))
 
 myLines = position1 + '\n' + position2 +'\n'+ position3 +'\n'+ position4 +'\n'+ position5 +'\n'+ position6 +'\n' + 'STOP' +'\n'
 try:
-    myDataFile = open('C:/Users/court/OneDrive/Desktop/DigitalTwinProj/InputController_PoseData.txt', 'a')
+    myDataFile = open('D:/DigitalTwinProject_2024Boyd/DTProjExternals/TextFiles/InputController_PoseData.txt', 'a')
     myDataFile.write(myLines)
 except Exception as e:
     print(f'Error: {e}')
